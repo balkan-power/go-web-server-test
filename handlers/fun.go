@@ -18,6 +18,7 @@ func (h *Handler) Fun(w http.ResponseWriter, r *http.Request) {
 		"hey, da's 't ibahesj",
 		"mensen hebben mij dat al meer dan 20 keer genoemd",
 		"we hebben een serieus probleem",
+
 		// the quotes in english, from wikiquote, of Richard Stallman.
 		"Every decision a person makes stems from the person's values and goals.",
 		"Standing up to an evil system is exhilarating, and now I have a taste for it.",

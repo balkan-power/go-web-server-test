@@ -10,7 +10,11 @@ import (
 
 func main() {
 
+	// we be routin' thangs, cuh!
 	r := mux.NewRouter()
+
+	fs := http.FileServer(http.Dir("./static"))
+	r.PathPrefix("/static/").Handler(http.StripPrefix("/static/", fs))
 
 	tmpl := template.Must(template.ParseGlob("templates/*")) // dynamic handling of templates
 

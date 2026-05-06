@@ -1,0 +1,28 @@
+body {
+    font-family: sans-serif;
+    background: #333;
+    color: #ddd;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header, nav {
+    padding: 1%;
+    background: #111;
+}
+
+h1 {
+    color: #66d;
+}
+
+a {
+    color: #66d;
+    text-decoration: none;
+    padding: 10px;
+}
+
+a:hover {
+    background-color: #555;
+    color: #ddf;
+}
