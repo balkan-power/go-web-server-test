@@ -10,7 +10,7 @@ func (h *Handler) About(w http.ResponseWriter, r *http.Request) {
 		PageTitle: "About",
 	}
 
-	err := h.Tmpl.ExecuteTemplate(w, "layout", data)
+	err := h.Tmpl.ExecuteTemplate(w, "layout.html", data)
 
 	if err != nil {
 		http.Error(w, err.Error(), 500)
