@@ -28,5 +28,5 @@ func main() {
 		fmt.Fprintf(w, "Site reached!")
 	})
 
-	http.ListenAndServe(":80", nil)
+	http.ListenAndServe(":80", r)
 }
