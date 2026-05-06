@@ -1,25 +1,17 @@
 package handlers
 
 import (
-	"math/rand"
+	"fmt"
 	"net/http"
 )
 
 func (h *Handler) Fun(w http.ResponseWriter, r *http.Request) {
 
-	// define what video IDs are used, HERE!
-	videos := []string{
-		"dQw4w9WgXcQ",
-		"9bZkp7q19f0",
-		"kxopViU98Xo",
-	}
-
-	random_vid := videos[rand.Intn(len(videos))]
-
 	data := PageData{
 		PageTitle: "Fun :)",
-		VideoID:   random_vid,
 	}
+
+	fmt.Printf("VIDEO: %q\n", data)
 
 	err := h.Tmpl.ExecuteTemplate(w, "fun", data)
 
