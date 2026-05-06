@@ -1,4 +1,16 @@
-{{define "content"}}
-<h1>Home</h1>
-<p>Welcome to West Park</p>
-{{end}}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{.PageTitle}}</title>
+</head>
+<body>
+
+{{template "navbar" .}}
+
+<hr>
+
+<!-- THIS is where page content gets injected -->
+{{template "content" .}}
+
+</body>
+</html>
