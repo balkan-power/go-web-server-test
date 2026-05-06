@@ -1,10 +1,17 @@
-{{define "content"}}
-<h1>Random Video</h1>
+{{define "fun"}}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{.PageTitle}}</title>
+</head>
+<body>
 
-<iframe width="640" height="480"
-src="https://www.youtube.com/embed/{{.VideoID}}"
-frameborder="0"
-allowfullscreen>
-</iframe>
+{{template "navbar" .}}
 
+<hr>
+
+{{block "content" .}}{{end}}
+
+</body>
+</html>
 {{end}}

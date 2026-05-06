@@ -12,7 +12,7 @@ func main() {
 
 	r := mux.NewRouter()
 
-	tmpl := template.Must(template.ParseGlob("templates/*.html")) // dynamic handling of templates
+	tmpl := template.Must(template.ParseGlob("templates/*")) // dynamic handling of templates
 
 	h := &handlers.Handler{
 		Tmpl: tmpl,
