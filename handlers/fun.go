@@ -1,7 +1,6 @@
 package handlers
 
 import (
-	"fmt"
 	"math/rand"
 	"net/http"
 )
@@ -23,7 +22,6 @@ func (h *Handler) Fun(w http.ResponseWriter, r *http.Request) {
 	}
 
 	err := h.Tmpl.ExecuteTemplate(w, "layout.html", data)
-	fmt.Fprintln(w, "FUN PAGE HIT")
 
 	if err != nil {
 		http.Error(w, err.Error(), 500)
