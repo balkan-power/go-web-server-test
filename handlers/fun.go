@@ -28,6 +28,7 @@ func (h *Handler) Fun(w http.ResponseWriter, r *http.Request) {
 		"Geeks like to think that they can ignore politics, you can leave politics alone, but politics won't leave you alone.",
 		"People said I should accept the world. Bullshit! I don't accept the world.",
 		"I don't have a problem with someone using their talents to become successful, I just don't think the highest calling is success. Things like freedom and the expansion of knowledge are beyond success, beyond the personal. Personal success is not wrong, but it is limited in importance, and once you have enough of it it is a shame to keep striving for that, instead of for truth, beauty, or justice.",
+		"While corporations dominate society and write the laws, each advance in technology is an opening for them to further restrict its users.",
 	}
 
 	random_quote := quotes[rand.Intn(len(quotes))]
