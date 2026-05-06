@@ -21,5 +21,9 @@ func (h *Handler) Fun(w http.ResponseWriter, r *http.Request) {
 		VideoID:   random_vid,
 	}
 
-	h.Tmpl.ExecuteTemplate(w, "layout.html", data)
+	err := h.Tmpl.ExecuteTemplate(w, "layout.html", data)
+
+	if err != nil {
+		http.Error(w, err.Error(), 500)
+	}
 }

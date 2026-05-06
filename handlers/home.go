@@ -10,5 +10,9 @@ func (h *Handler) Home(w http.ResponseWriter, r *http.Request) {
 		PageTitle: "Home",
 	}
 
-	h.Tmpl.ExecuteTemplate(w, "layout.html", data)
+	err := h.Tmpl.ExecuteTemplate(w, "layout.html", data)
+
+	if err != nil {
+		http.Error(w, err.Error(), 500)
+	}
 }
