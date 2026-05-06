@@ -11,4 +11,5 @@ type Handler struct {
 // very important info :)
 type PageData struct {
 	PageTitle string
+	Quote     string
 }
