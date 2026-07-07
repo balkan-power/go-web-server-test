@@ -4,12 +4,13 @@ function updateClock() {
 
         // ai slop
         document.getElementById("clock").textContent =
-            `${pad(now.getDate())}.` +
-            `${pad(now.getMonth() + 1)}.` +
-            `${now.getFullYear()} ` +
-            `${pad(now.getHours())}:` +
-            `${pad(now.getMinutes())}:` +
-            `${pad(now.getSeconds())}`;
+        "Today is: " +
+        `${pad(now.getDate())}.` +
+        `${pad(now.getMonth() + 1)}.` +
+        `${now.getFullYear()} ` +
+        `${pad(now.getHours())}:` +
+        `${pad(now.getMinutes())}:` +
+        `${pad(now.getSeconds())}`;
     }
 
     updateClock();
