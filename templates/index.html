@@ -1,23 +1,23 @@
 {{define "home"}}
 <!DOCTYPE html>
 <html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{.PageTitle}}</title>
-    <link rel="stylesheet" href="/static/css/style.css">
-</head>
-<body>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{.PageTitle}}</title>
+        <link rel="stylesheet" href="/static/css/style.css">
+    </head>
+    <body>
 
-{{template "navbar" .}}
+        {{template "navbar" .}}
 
-<hr>
+        <hr>
 
-<h1>Home</h1>
-<h2>Welcome to West Park!</h2>
+        <h1>Home</h1>
+        <h2>Welcome to West Park!</h2>
 
-{{block "datetime" .}}{{end}}
+        {{block "datetime" .}}{{end}}
 
-{{template "footer" .}}
-</body>
+        {{template "footer" .}}
+    </body>
 </html>
 {{end}}
