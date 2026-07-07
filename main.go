@@ -30,5 +30,5 @@ func main() {
 	r.HandleFunc("/about", h.About)
 	r.HandleFunc("/fun", h.Fun) // because we all need fun in our lives ;)
 
-	http.ListenAndServe(":8000", r)
+	http.ListenAndServe(":8080", r)
 }
