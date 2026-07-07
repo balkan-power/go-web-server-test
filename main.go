@@ -18,6 +18,9 @@ func main() {
 
 	tmpl := template.Must(template.ParseGlob("templates/*")) // dynamic handling of templates
 
+	// i tried to add seperate "views" in static but it doesnt seem to wanna work
+	// so i will just keep all of the pages in templates, but i dont think that it's
+	// necessarily the cleanest way of doing this. oh welp
 	h := &handlers.Handler{
 		Tmpl: tmpl,
 	}
