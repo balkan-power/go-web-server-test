@@ -40,11 +40,26 @@ func (h *Handler) Fun(w http.ResponseWriter, r *http.Request) {
 		"While corporations dominate society and write the laws, each advance in technology is an opening for them to further restrict its users.",
 	}
 
+	memes := []string{
+		"https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+		"https://www.youtube.com/watch?v=TNUXzTP79e0",
+		"https://www.youtube.com/watch?v=3c2wdlxLy7Q",
+		"https://www.youtube.com/watch?v=XcyzLyZeqf4?t=43",
+		"https://www.youtube.com/watch?v=j308rH1j_bg",
+		"https://www.youtube.com/watch?v=vbIbIurceNU",
+		"https://www.youtube.com/watch?v=EAzskL3gNxc",
+		"https://www.youtube.com/watch?v=dQa8lydtFmE",
+		"https://www.youtube.com/watch?v=s0Gpd2ooB9w",
+		"https://www.youtube.com/watch?v=wa5inGuht_o",
+	}
+
 	random_quote := quotes[rand.Intn(len(quotes))]
+	random_meme := memes[rand.Intn(len(memes))]
 
 	data := PageData{
 		PageTitle: "Fun :)",
 		Quote:     random_quote,
+		Meme:      random_meme,
 	}
 
 	err := h.Tmpl.ExecuteTemplate(w, "fun", data)
