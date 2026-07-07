@@ -11,8 +11,11 @@ const memes = [
     "https://www.youtube.com/watch?v=wa5inGuht_o",
     "https://www.youtube.com/watch?v=bPzVV_5sQtc",
     "https://www.youtube.com/watch?v=sUSN7fqVBio",
+    "https://www.youtube.com/watch?v=4g1PHFwqkVE",
+    "https://www.youtube.com/watch?v=hmmIl9aMz4I",
 ];
 
+// more ai slop i fucking hate javascript
 function randomMeme(e) {
     e.preventDefault();
     const url = memes[Math.floor(Math.random() * memes.length)];
